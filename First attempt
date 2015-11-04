@@ -1,0 +1,25 @@
+public class WebCamTexture : MonoBehaviour
+{
+
+    void Start()
+    {
+        WebCamTexture webcamTexture = new WebCamTexture();
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material.mainTexture = webcamTexture;
+        webcamTexture.Play(); renderer.material.mainTexture = webcamTexture;
+        webcamTexture.Play();
+    }
+               // this line is made because VS gives me an error and this is the only solution it gives. 
+               // Same with the last operator texture
+               // I get no compiler error however Unity says there is a problem with the NoTImplemntedException
+               // 
+    private void Play()
+    {
+        throw new NotImplementedException();
+    }
+
+    public static implicit operator Texture(WebCamTexture v)
+    {
+        throw new NotImplementedException();
+    }
+}
