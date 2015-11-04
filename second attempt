@@ -1,0 +1,7 @@
+WebCamTexture webcamTexture = new WebCamTexture();
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material.mainTexture = webcamTexture;
+        webcamTexture.Play();
+        
+        // This is the default way of making a webcameTexture by unity however I get an error on the .Play saying it's protected
+        // I've been reading that it's due to the unity webplayer however I am not using that as my build so I have no idea how to fix it
